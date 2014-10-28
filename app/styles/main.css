@@ -1,17 +1,17 @@
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
 /* Space out content a bit */
 body {
-    padding-top: 10px;
-    padding-bottom: 20px;
-     /*background-color: #888D93 ;*/
+  padding-top: 10px;
+  padding-bottom: 20px;
+  /*background-color: #888D93 ;*/
 
-    background-image: url("images/back.jpg");
+  background-image: url("images/back.jpg");
 
 }
 
@@ -19,73 +19,71 @@ body {
 .header,
 .marketing,
 .footer {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Custom page header */
 .header {
-    background-image: url("images/nav.jpg");
-    width: 100%;
-    margin-bottom: 30px;
-    height: 45px;
+  background-image: url("images/nav.jpg");
+  width: 100%;
+  margin-bottom: 30px;
+  height: 45px;
 
 }
 
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-    text-align: center;
-    font-family: sail;
-    font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+  text-align: center;
+  font-family: sail;
+  font-size: 36px;
 }
 
 /* Custom page footer */
 .footer {
-    padding-top: 19px;
-    color: #777;
-    text-align: center;
+  padding-top: 19px;
+  color: #777;
+  text-align: center;
 
 }
 
 .container-narrow > hr {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+  font-size: 21px;
+  padding: 14px 24px;
 }
 
 /* Supporting marketing content */
 .marketing {
-    margin: 40px 0;
+  margin: 40px 0;
 }
 
 .marketing p + h4 {
-    margin-top: 28px;
+  margin-top: 28px;
 }
 
 .my-container {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid black;
-    box-shadow: -3px -3px 9px ;
-    float: left;
-    max-width: 600px;
-    padding: 0;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: -3px -3px 9px;
+  float: left;
+  max-width: 600px;
+  padding: 0;
 }
-
-
 
 /*@media screen and (min-width: 320px) {*/
 /*.container {*/
@@ -148,36 +146,36 @@ body {
 /*}*/
 
 input[type=checkbox] {
-    width: 30px height : 30 px;
-    margin-right: 8px;
-    cursor: pointer;
-    font-size: 15px;
+  width: 30px height : 30 px;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .tags {
-    float: left;
-    padding: 10px;
+  float: right;
+  padding: 10px;
 }
 
 input[type=checkbox]:after {
-    content: " ";
-    background-color: #6fff46;
-    display: inline-block;
-    visibility: visible;
+  content: " ";
+  background-color: #6fff46;
+  display: inline-block;
+  visibility: visible;
 
 }
 
 input[type=checkbox]:checked:after {
-    content: "\2714";
+  content: "\2714";
 
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .listBtn {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /*#notify{
@@ -188,229 +186,216 @@ ul {
 }*/
 
 .imgLogo {
-    float: right;
-    width: 95px;
-    height: 80px;
-    margin-top: 5px;
+  float: right;
+  width: 95px;
+  height: 80px;
+  margin-top: 5px;
 }
 
 .imgLogo:hover {
-    -webkit-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 
 #todo_list li {
-    border-bottom: 1px solid darkgrey;
-    padding: 7px;
-    width: 100%;
-    color: #000000;
+  border-bottom: 1px solid darkgrey;
+  padding: 7px;
+  width: 100%;
+  color: #000000;
 }
 
 #todo_list a {
-    color: #000000;
-    font: bold;
+  color: #000000;
+  font: bold;
 
 }
 
 h4 {
-    display: inline-block;
-    padding-right: 20px;
+  display: inline-block;
+  padding-right: 20px;
 
 }
 
 #category {
-    border-radius: 3px;
-    padding: 5px 10px;
-    height: 30px;
-    margin: 5px;
-    width: 210px;
-    background-color: transparent;
+  border-radius: 3px;
+  padding: 5px 10px;
+  height: 30px;
+  margin: 5px;
+  width: 210px;
+  background-color: transparent;
 
 }
 
 #category option {
-    background-color: gray;
+  background-color: gray;
 }
 
-.remove {
-    float: right;
 
-}
 
 .modify {
-    float: right;
-    padding-right: 5px;
+  float: right;
+  padding-right: 10px;
+  cursor: pointer;
 }
 
 form input[type='radio'] {
-    width: 20px;
-    height: 20px;
-    margin: 5px;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
 
 }
 
-#add {
-    border-radius: 7px;
-    color: white;
-    background-color: #404040;
-    margin: 5px;
-    float: right;
+/*#add {*/
+  /*border-radius: 7px;*/
+  /*color: white;*/
+  /*background-color: #404040;*/
+  /*margin: 5px;*/
+  /*float: right;*/
 
-
-}
+/*}*/
 
 .my_glyphicon {
-    color: white;
-    padding-right: 10px;
-}
+  color: white;
+  padding: 10px;
+  float: right;
+  cursor: pointer;
 
-/*#textInput {
-    padding: 5px;
-    border-radius: 3px;
-    width: 50%;
-    margin-bottom: 5px;
-}
-
-#priorityInput {
-    padding: 5px;
-    border-radius: 3px;
-    width: 50%;
-    margin-bottom: 5px;
 
 }
 
-#dateInput {
 
-    border-radius: 3px;
-    width: 44%;
-    margin-bottom: 10px;
-}
-*/
 
 /* */
 /*meniu vertical*/
 
 .my-navbar {
-    float: left;
-    border: none;
-    background-color: transparent;
-    position: relative;
-    margin: 10px;
+  float: left;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  margin: 10px;
 }
 
 /*.my-navbar .nav-div ul li a {*/
-    /*color: white;*/
-    /*background-color: transparent;*/
-    /*font: bold;*/
+/*color: white;*/
+/*background-color: transparent;*/
+/*font: bold;*/
 
 /*}*/
 
-
 .nav-header a {
-    color: white;
+  color: white;
 }
 
-
 .nav-div ul li {
-    height: 40px;
-    float: none;
-    width: 220px;
-    /*opacity: 0.8;*/
-    background-image: url("images/menu.jpg");
-    box-shadow: inset 0px 0px 2px  #333;
-    color: white;
-    font: 16px Arial, serif;
-    border-style: hidden;
-
+  height: 40px;
+  float: none;
+  width: 220px;
+  /*opacity: 0.8;*/
+  background-image: url("images/menu.jpg");
+  box-shadow: inset 0px 0px 2px #333;
+  color: white;
+  font: 16px Arial, serif;
+  border-style: hidden;
 
 }
 
 .my-navbar .nav-header .navbar-title {
-    color: white;
-    height: 30px;
-    text-align: center;
-    margin-left: 0px;
-
+  color: white;
+  height: 30px;
+  text-align: center;
+  margin-left: 0px;
 
 }
 
 /*.my-navbar .nav-div ul li:nth-child(1) {*/
-    /*border-radius: 10px;*/
-    /*margin-top: 15px;*/
-    /*margin-bottom: 10px;*/
+/*border-radius: 10px;*/
+/*margin-top: 15px;*/
+/*margin-bottom: 10px;*/
 
 /*}*/
 
 .my-navbar .nav-div ul li:first-child {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-top: 20px;
-    border-bottom: 0;
-    padding: 10px;
-    cursor: pointer;
-
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 20px;
+  border-bottom: 0;
+  padding: 10px;
+  cursor: pointer;
 
 }
 
 .my-navbar .nav-div ul li:last-child {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    cursor: pointer;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
 
 }
 
 .my-navbar .nav-div ul li:nth-child(5) {
-    border-radius: 10px;
-    margin-bottom: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .my-navbar .nav-div ul li:active {
-    /*background-color: rgba(0, 0, 0, 0.4);*/
-    background-image: url("images/active.jpg");
-    color: white;
+  /*background-color: rgba(0, 0, 0, 0.4);*/
+  background-image: url("images/active.jpg");
+  color: white;
 }
 
 .btn-navbar {
-    background-color: #ffffff;
+  background-color: #ffffff;
 
 }
 
 .my-menu {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .my-navbar .nav-tag > .open > a,
 .my-navbar .nav-tag > .open > a:hover,
 .my-navbar .nav-tag > .open > a:focus {
-    background-color: transparent;
-    color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
 }
 
 .span_title {
-    color: #ffffff;
-    text-align: center;
-    font-size: 16px;
-   float: left;
-    margin-left: 20%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  float: left;
+  margin-left: 30%;
+  padding: 10px;
 
 }
 
-.setOpacity{
-    opacity: 0.5;
+.setOpacity {
+  opacity: 0.5;
 }
 
-.notOpacity{
-    opacity: 1;
+.notOpacity {
+  opacity: 1;
 }
-.li-label{
-    margin: 10px;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: normal;
-}
-.my-cog{
-    color: #ffffff;
 
+.li-label {
+  margin: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+.my-cog {
+  color: #ffffff;
+
+}
+
+.remove {
+  cursor: pointer;
+  float:right;
+
+}
+#todo_list.newStyle{
+  padding-top: 70px;
 }

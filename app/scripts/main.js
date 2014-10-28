@@ -149,8 +149,9 @@ function addReminders(category) {
                 '<li class="row li-row" id="reminder-' + reminder + '" data-reminder-id="' + reminder + '" data-category-id="' + category + '"' + /*(app.data[category].reminders[reminder].isDone ? 'style="display:none"' : '')*/ '' + '>' +
                 '<input type="checkbox" class="checkboxInput" ' + (app.data[category].reminders[reminder].isDone ? 'checked' : '') + '>' +
                 '<a href="#"  >' + app.data[category].reminders[reminder].description + ' - ' + new Date(app.data[category].reminders[reminder].date).toLocaleString() + '</a>' +
-                '<a href="#"  class="remove">Remove</a>' +
-                '<a href="#" class="modify" data-toggle="modal" data-target="#addReminderModal">Edit</a>' +
+                //'<a href="#"  class="remove">Remove</a>' +
+                '<span class="glyphicon glyphicon-remove remove"></span>' +
+                '<span class="glyphicon glyphicon-pencil modify" data-toggle="modal" data-target="#addReminderModal"></span>' +
                 '</li>');
     }
 
@@ -167,6 +168,12 @@ function addReminders(category) {
 //     //console.log("3"+ app.data[category].reminders[reminder].priorityLevel);
 //     $("#todo_list li").css({'background-color':'red'});
 //     }
+
+
+  $(".btn-navbar").click(function(){
+    $("#todo_list").toggleClass("newStyle");
+  });
+
 
 //add new reminder
     $("#add").click(function () {
@@ -284,7 +291,6 @@ function dateSanitizer(date) {
     return new Date(date.getTime() + userOffset).getTime();
 
 }
-
 function clock() {
     var date = new Date();
     var timeDate = date.getTime();

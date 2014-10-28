@@ -1,0 +1,42 @@
+@media screen and (max-width: 480px) {
+  .my-navbar {
+    position: absolute;
+
+  }
+
+  .nav-div ul {
+    margin: 2px 5px 2px 4px;
+  }
+
+  .btn-navbar {
+    float: left;
+    height: 30px;
+
+  }
+
+  .navbar-title {
+    display: none;
+  }
+
+  .my-navbar .nav-div ul li:first-child {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .my-navbar .nav-div ul li:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .nav-div {
+    padding-left: 0;
+    padding-right: 0px;
+
+  }
+
+  .nav-div ul li {
+    width: 100%;
+  }
+}
+
