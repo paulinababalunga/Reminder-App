@@ -1,17 +1,17 @@
 @media screen and (max-width: 480px) {
   .my-navbar {
     position: absolute;
-
+    width: 220px;
   }
 
   .nav-div ul {
     margin: 2px 5px 2px 4px;
+
   }
 
   .btn-navbar {
     float: left;
     height: 30px;
-
   }
 
   .navbar-title {
@@ -32,11 +32,15 @@
   .nav-div {
     padding-left: 0;
     padding-right: 0px;
-
   }
 
   .nav-div ul li {
     width: 100%;
+  }
+  .my-container{
+    margin-left: 0;
+    margin-right: 0
+
   }
 }
 

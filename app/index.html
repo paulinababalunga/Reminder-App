@@ -9,100 +9,94 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/tablet.css">
   <!-- endbuild -->
 
 </head>
 <body>
+<div class="content">
+  <div class="alert alert-success alert-dismissible" id="notify" role="alert" style="display:none">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
+      class="sr-only">Close</span></button>
+    <strong>Reminder!</strong> <h6>Better check yourself, you're not looking too good.</h6>
+  </div>
+  <nav class="navbar navbar-default navbar-fixed-top my-navbar " role="navigation">
+    <div class="container-fluid my-fluid-container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header nav-header">
+        <button type="button" class="navbar-toggle collapsed btn-navbar" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand navbar-title">Lists
+        <button type="button" class="btn btn-sm btn-default btnCategory" data-toggle="modal"
+          data-target="#addNewCategory">New category</button></a>
+      </div>
 
-<div class="alert alert-success alert-dismissible" id="notify" role="alert" style="display:none">
-  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
-    class="sr-only">Close</span></button>
-  <strong>Reminder!</strong> <h6>Better check yourself, you're not looking too good.</h6>
-</div>
-<nav class="navbar navbar-default navbar-fixed-top my-navbar " role="navigation">
-  <div class="container-fluid my-fluid-container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header nav-header">
-      <button type="button" class="navbar-toggle collapsed btn-navbar" data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand navbar-title">Lists</a>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse nav-div" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav nav-tag">
 
-      <!--<a class="navbar-brand navbar-title" href="#">Lists</a>-->
-      <!--<span class="navbar-brand navbar-title">Lists</span>-->
+          <!--<li><a href="#" class="menu-link category"></a></li>-->
+          <!--<li><a href="#" class="category"></a></li>-->
+          <!--<li><a href="#" class="menu-link">Link</a></li>-->
+          <!--<li><select id="category">-->
+          <!--&lt;!&ndash;<option>Select Category</option>&ndash;&gt;-->
+          <!--</select></li>-->
+          <!--<li class="dropdown">-->
+          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Select category <span class="caret"></span></a>-->
+          <!--<ul class="dropdown-menu my-menu" role="menu">-->
+          <!--<li><a href="#">Action</a></li>-->
+          <!--<li><a href="#">Another action</a></li>-->
+          <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="#">Separated link</a></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li><a href="#">One more separated link</a></li>&ndash;&gt;-->
+          <!--</ul>-->
+          <!--</li>-->
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+
+  <div class="container my-container">
+    <div class="header">
+      <span class="span_title">Reminders</span>
+    <span class="glyphicon glyphicon-plus my_glyphicon" id="add" data-toggle="modal"
+          data-target="#addReminderModal"></span>
+      <!--<button type="button" id="add" class="btn btn-sm btn-default" data-toggle="modal"-->
+      <!--data-target="#addReminderModal">Add-->
+      <!--</button>-->
+      <!--<div class="tags">-->
+      <!--<span class="glyphicon glyphicon-time my_glyphicon"></span>-->
+      <!--<span class="glyphicon glyphicon-tag my_glyphicon"></span>-->
+      <!--<span class="glyphicon glyphicon-arrow-right my_glyphicon"></span>-->
+      <!--<span class="glyphicon glyphicon-star my_glyphicon"></span>-->
+
+      <!--</div>-->
 
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse nav-div" id="bs-example-navbar-collapse-1">
-
-      <ul class="nav navbar-nav nav-tag">
-
-        <!--<li><a href="#" class="menu-link category"></a></li>-->
-        <!--<li><a href="#" class="category"></a></li>-->
-        <!--<li><a href="#" class="menu-link">Link</a></li>-->
-        <!--<li><select id="category">-->
-        <!--&lt;!&ndash;<option>Select Category</option>&ndash;&gt;-->
-        <!--</select></li>-->
-        <!--<li class="dropdown">-->
-        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Select category <span class="caret"></span></a>-->
-        <!--<ul class="dropdown-menu my-menu" role="menu">-->
-        <!--<li><a href="#">Action</a></li>-->
-        <!--<li><a href="#">Another action</a></li>-->
-        <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
-        <!--&lt;!&ndash;<li><a href="#">Separated link</a></li>&ndash;&gt;-->
-        <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
-        <!--&lt;!&ndash;<li><a href="#">One more separated link</a></li>&ndash;&gt;-->
-        <!--</ul>-->
-        <!--</li>-->
+    <div class="content-primary">
+      <ul id="todo_list">
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container-fluid -->
-</nav>
-
-
-<div class="container my-container">
-  <div class="header">
-
-
-    <span class="span_title">Reminders</span>
-     <span class="glyphicon glyphicon-plus my_glyphicon" id="add" data-toggle="modal"
-           data-target="#addReminderModal"></span>
-    <!--<button type="button" id="add" class="btn btn-sm btn-default" data-toggle="modal"-->
-    <!--data-target="#addReminderModal">Add-->
-    <!--</button>-->
-    <!--<div class="tags">-->
-    <!--<span class="glyphicon glyphicon-time my_glyphicon"></span>-->
-    <!--<span class="glyphicon glyphicon-tag my_glyphicon"></span>-->
-    <!--<span class="glyphicon glyphicon-arrow-right my_glyphicon"></span>-->
-    <!--<span class="glyphicon glyphicon-star my_glyphicon"></span>-->
-
-    <!--</div>-->
+    <div class="footer">
+      <!--<a class="listBtn">See your reminders list</a>-->
+    </div>
 
   </div>
-  <div class="content-primary">
-    <ul id="todo_list">
-    </ul>
-  </div>
-
-
-  <div class="footer">
-
-    <!--<a class="listBtn">See your reminders list</a>-->
-  </div>
-
 </div>
 
 <!-- Modal -->
@@ -146,11 +140,43 @@
       </div>
       <div class="modal-footer">
         <button type="button" id="btn-submit-reminder" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-primary" id="cancel" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary cancel" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+<!-- Modal new category -->
+<div class="modal fade" id="addNewCategory">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3></h3>
+      </div>
+      <div class="modal-body">
+        <div class=form-container>
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="textInputCategory" class="col-sm-2 control-label">New category:</label>
+              <div class="col-sm-10">
+                <input id="textInputCategory" placeholder="Add new Category..." value="" class="form-control"
+                       type="text"><br/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn-submit-category" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary cancel" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->

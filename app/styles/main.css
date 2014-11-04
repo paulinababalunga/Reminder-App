@@ -80,9 +80,13 @@ body {
   border-radius: 5px;
   border: 1px solid black;
   box-shadow: -3px -3px 9px;
-  float: left;
-  max-width: 600px;
-  padding: 0;
+  /*float: left;*/
+  display: inline-block;
+  /*max-width: 600px;*/
+  padding-left: 0;
+  padding-right: 0;
+  /*margin-right: 10px;*/
+  margin-left: 30px;
 }
 
 /*@media screen and (min-width: 320px) {*/
@@ -185,17 +189,6 @@ ul {
     top:0;
 }*/
 
-.imgLogo {
-  float: right;
-  width: 95px;
-  height: 80px;
-  margin-top: 5px;
-}
-
-.imgLogo:hover {
-  -webkit-transform: rotate(180deg);
-}
-
 #todo_list li {
   border-bottom: 1px solid darkgrey;
   padding: 7px;
@@ -205,8 +198,6 @@ ul {
 
 #todo_list a {
   color: #000000;
-  font: bold;
-
 }
 
 h4 {
@@ -228,8 +219,6 @@ h4 {
 #category option {
   background-color: gray;
 }
-
-
 
 .modify {
   float: right;
@@ -259,12 +248,8 @@ form input[type='radio'] {
   float: right;
   cursor: pointer;
 
-
 }
 
-
-
-/* */
 /*meniu vertical*/
 
 .my-navbar {
@@ -319,7 +304,7 @@ form input[type='radio'] {
   border-top-right-radius: 10px;
   margin-top: 20px;
   border-bottom: 0;
-  padding: 10px;
+  /*padding: 10px;*/
   cursor: pointer;
 
 }
@@ -328,15 +313,15 @@ form input[type='radio'] {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-bottom: 10px;
-  padding: 10px;
+  /*padding: 10px;*/
   cursor: pointer;
 
 }
 
-.my-navbar .nav-div ul li:nth-child(5) {
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
+/*.my-navbar .nav-div ul li:nth-child(5) {*/
+  /*border-radius: 10px;*/
+  /*margin-bottom: 10px;*/
+/*}*/
 
 .my-navbar .nav-div ul li:active {
   /*background-color: rgba(0, 0, 0, 0.4);*/
@@ -367,7 +352,6 @@ form input[type='radio'] {
   float: left;
   margin-left: 30%;
   padding: 10px;
-
 }
 
 .setOpacity {
@@ -398,4 +382,24 @@ form input[type='radio'] {
 }
 #todo_list.newStyle{
   padding-top: 70px;
+}
+
+.btnCategory{
+  margin-left: 20px;
+}
+.liStyle{
+  padding: 15px;
+  cursor: pointer;
+
+}
+.removeCategory{
+  cursor:pointer;
+  float:right;
+  padding: 10px;
+}
+
+.modifyCategory{
+  float: right;
+  padding:10px 5px 10px 10px;
+
 }
