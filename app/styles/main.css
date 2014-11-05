@@ -388,7 +388,7 @@ form input[type='radio'] {
   margin-left: 20px;
 }
 .liStyle{
-  padding: 15px;
+  padding: 11px;
   cursor: pointer;
 
 }
@@ -402,4 +402,7 @@ form input[type='radio'] {
   float: right;
   padding:10px 5px 10px 10px;
 
+}
+.btnCategory{
+  cursor: pointer;
 }

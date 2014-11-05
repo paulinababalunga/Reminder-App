@@ -38,8 +38,10 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand navbar-title">Lists
-        <button type="button" class="btn btn-sm btn-default btnCategory" data-toggle="modal"
-          data-target="#addNewCategory">New category</button></a>
+        <!--<button type="button" class="btn btn-sm btn-default btnCategory" data-toggle="modal"-->
+          <!--data-target="#addNewCategory">New category</button></a>-->
+          <span class="glyphicon glyphicon-plus btnCategory" data-toggle="modal"
+                data-target="#addNewCategory"></span></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -148,7 +150,6 @@
 
 
 
-
 <!-- Modal new category -->
 <div class="modal fade" id="addNewCategory">
   <div class="modal-dialog">
@@ -162,7 +163,7 @@
             <div class="form-group">
               <label for="textInputCategory" class="col-sm-2 control-label">New category:</label>
               <div class="col-sm-10">
-                <input id="textInputCategory" placeholder="Add new Category..." value="" class="form-control"
+                <input id="textInputCategory" placeholder="Enter text here..." value="" class="form-control"
                        type="text"><br/>
               </div>
             </div>
