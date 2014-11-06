@@ -244,12 +244,12 @@ form input[type='radio'] {
 
 /*}*/
 
-.my_glyphicon {
+.addGlyphicon{
   color: white;
   padding: 10px;
   float: right;
   cursor: pointer;
-
+  margin-right: 11px;
 
 
 }
@@ -364,7 +364,7 @@ form input[type='radio'] {
   text-align: center;
   font-size: 16px;
   float: left;
-  margin-left: 30%;
+  margin-left: 40%;
   padding: 10px;
 }
 

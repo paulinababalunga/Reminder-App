@@ -114,10 +114,6 @@ var initEventHandlers = function () {
     localStorage['app'] = JSON.stringify(app);
   });
 
-  //Click on category button and change title
-
-
-
   //Save new reminder in list
   $('#btn-submit-reminder').click(function () {
     save_todo();
@@ -125,8 +121,7 @@ var initEventHandlers = function () {
 
   });
 
-
-  //Save new category in list
+  //Save new category in list when click
   $('#btn-submit-category').click(function () {
     saveNewCategory();
     location.reload();
@@ -141,29 +136,30 @@ var initEventHandlers = function () {
       $('#add').prop('disabled', false);
     }
   });
-  
+
 }
 
 //Init function
 var init = function () {
 
-  addReminders(app.config.selectedCategory);
   addCategories();
+  addReminders();
   clock();
   initEventHandlers();
-
 
 };
 
 //Add new reminder
-function addReminders(category) {
+function addReminders() {
+  var category = app.config.selectedCategory;
   if (category != undefined) {
     $("#todo_list").html('');
+    $(".span_title").text(app.data[category].category);
     for (var reminder in app.data[category].reminders) {
       $("#todo_list").append(
-        '<li class="row li-row" id="reminder-' + reminder + '" data-reminder-id="' + reminder + '" data-category-id="' + category + '"' + /*(app.data[category].reminders[reminder].isDone ? 'style="display:none"' : '')*/ '' + '>' +
+        '<li class="row li-row" id="reminder-' + reminder + '" data-reminder-id="' + reminder + '" data-category-id="' + category + '"' + + '" data-title="' + app.data[category].category +  /*(app.data[category].reminders[reminder].isDone ? 'style="display:none"' : '')*/ '' + '>' +
         '<input type="checkbox" class="checkboxInput" ' + (app.data[category].reminders[reminder].isDone ? 'checked' : '') + '>' +
-        '<a href="#"  >' + app.data[category].reminders[reminder].description + ' - ' + new Date(app.data[category].reminders[reminder].date).toLocaleString() + '</a>' +
+        '<a href="#" class="listReminders"  >' + app.data[category].reminders[reminder].description + ' - ' + new Date(app.data[category].reminders[reminder].date).toLocaleString() + '</a>' +
           //'<a href="#"  class="remove">Remove</a>' +
         '<span class="glyphicon glyphicon-remove removeReminder"></span>' +
         '<span class="glyphicon glyphicon-pencil modifyReminder" data-toggle="modal" data-target="#addReminderModal"></span>' +
@@ -171,6 +167,12 @@ function addReminders(category) {
       localStorage['app'] = JSON.stringify(app);
     }
   }
+
+  $(".listReminders").click(function(){
+    var reminderId = $(this).parent().data('reminderId');
+
+
+  });
 
 
   //Edit a reminder
@@ -221,7 +223,7 @@ function addCategories() {
     localStorage['app'] = JSON.stringify(app);
   }
 
-  //Click on addButton category
+  //Click on addCategory Button
   $(".btnAddCategory").click(function () {
     $(".modal-header h3").text("Add new category");
     app.config.editReminder = {
@@ -233,11 +235,9 @@ function addCategories() {
   // Click on list of categories and view reminders
   $(".my-navbar .nav-div ul li").click(function () {
     var categoryId = $(this).data('category');
-    var categoryTitle = $(this).data('title');
-    $(".span_title").text(categoryTitle);
-    addReminders(categoryId);
     app.config.selectedCategory = categoryId;
-    //localStorage['app'] = JSON.stringify(app);
+    addReminders();
+    localStorage['app'] = JSON.stringify(app);
   });
 
 
@@ -245,9 +245,11 @@ function addCategories() {
   $('.removeCategory').click(function () {
     //var reminderNo = $(this).parent().data('reminderId');
     var categoryNo = $(this).parent().data('category');
+    console.log(categoryNo);
     delete app.data[categoryNo];
     $(this).parent().remove();
     //app.config.selectedCategory = categoryNo;
+    app.config.selectedCategory = undefined;
     localStorage['app'] = JSON.stringify(app);
   });
 
@@ -277,7 +279,6 @@ function saveNewCategory() {
   } else { // Add it
     app.data[Object.keys(app.data).length] = category;
   }
-  //app.data[Object.keys(app.data).length] = category;
   localStorage['app'] = JSON.stringify(app);
   $("#addNewCategory").modal('hide');
 
