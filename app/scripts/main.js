@@ -106,7 +106,7 @@ var initEventHandlers = function () {
   });
 
   //Delete reminder from list
-  $('#todo_list').on('click', '.remove', function () {
+  $('#todo_list').on('click', '.removeReminder', function () {
     var reminderNo = $(this).parent().data('reminderId');
     var categoryNo = $(this).parent().data('categoryId');
     delete app.data[categoryNo].reminders[reminderNo];
@@ -115,10 +115,7 @@ var initEventHandlers = function () {
   });
 
   //Click on category button and change title
-  $(".btnCategory").click(function () {
-    $(".modal-header h3").text("Add new category");
 
-  });
 
 
   //Save new reminder in list
@@ -135,6 +132,16 @@ var initEventHandlers = function () {
     location.reload();
   });
 
+  //$('#add').click(function(){
+  //  if (app.data.category == '') {
+  //    $('#add').prop('disabled', true);
+  //  } else {
+  //    $('#add').prop('disabled', false);
+  //  }
+  //});
+
+
+
 }
 
 //Init function
@@ -144,6 +151,7 @@ var init = function () {
   addCategories();
   clock();
   initEventHandlers();
+
 
 };
 
@@ -157,8 +165,8 @@ function addReminders(category) {
         '<input type="checkbox" class="checkboxInput" ' + (app.data[category].reminders[reminder].isDone ? 'checked' : '') + '>' +
         '<a href="#"  >' + app.data[category].reminders[reminder].description + ' - ' + new Date(app.data[category].reminders[reminder].date).toLocaleString() + '</a>' +
           //'<a href="#"  class="remove">Remove</a>' +
-        '<span class="glyphicon glyphicon-remove remove"></span>' +
-        '<span class="glyphicon glyphicon-pencil modify" data-toggle="modal" data-target="#addReminderModal"></span>' +
+        '<span class="glyphicon glyphicon-remove removeReminder"></span>' +
+        '<span class="glyphicon glyphicon-pencil modifyReminder" data-toggle="modal" data-target="#addReminderModal"></span>' +
         '</li>');
       localStorage['app'] = JSON.stringify(app);
     }
@@ -166,7 +174,7 @@ function addReminders(category) {
 
 
   //Edit a reminder
-  $(".modify").click(function () {
+  $(".modifyReminder").click(function () {
     $(".modal-header h3").text("Edit Reminder");
     app.config.editReminder = {
       reminderId: $(this).parent().data('reminderId'),
@@ -214,6 +222,15 @@ function addCategories() {
     localStorage['app'] = JSON.stringify(app);
   }
 
+  //Click on addButton category
+  $(".btnAddCategory").click(function () {
+    $(".modal-header h3").text("Add new category");
+    app.config.editReminder = {
+      categoryId: ''
+    };
+
+  });
+
   // Click on list of categories and view reminders
   $(".my-navbar .nav-div ul li").click(function () {
     var categoryId = $(this).data('category');
@@ -237,6 +254,7 @@ function addCategories() {
   //Modify category
   $(".modifyCategory").click(function () {
     $(".modal-header h3").text("Edit Category");
+    $('.nav-tag').html();
     app.config.editReminder = {
       //  //reminderId: $(this).parent().data('reminderId'),
       categoryId: $(this).parent().data('category')
@@ -253,7 +271,6 @@ function saveNewCategory() {
   };
   var categoryId = app.config.editReminder.categoryId;
   //var reminderId = app.config.editReminder.reminderId;
-  alert(categoryId)
 
   if (categoryId) { // Modify a category
     app.data[categoryId] = category;
@@ -264,15 +281,6 @@ function saveNewCategory() {
   localStorage['app'] = JSON.stringify(app);
   $("#addNewCategory").modal('hide');
 
-
-  //  var category = {
-//    category: $("#textInputCategory").val(),
-//    reminders: {}
-//  };
-//  app.data[Object.keys(app.data).length] = category;
-//  localStorage['app'] = JSON.stringify(app);
-//  $("#addNewCategory").modal('hide');
-//}
 }
 
 // Function which saves a new reminder

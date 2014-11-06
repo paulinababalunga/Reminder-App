@@ -7,7 +7,7 @@
 
 /* Space out content a bit */
 body {
-  padding-top: 10px;
+  /*padding-top: 10px;*/
   padding-bottom: 20px;
   /*background-color: #888D93 ;*/
 
@@ -87,6 +87,7 @@ body {
   padding-right: 0;
   /*margin-right: 10px;*/
   margin-left: 30px;
+  margin-top: 10px;
 }
 
 /*@media screen and (min-width: 320px) {*/
@@ -118,6 +119,7 @@ body {
 
 /* Remove the bottom border on the jumbotron for visual effect */
 /*.jumbotron {*/
+
 /*border-bottom: 0;*/
 /*}*/
 
@@ -248,6 +250,8 @@ form input[type='radio'] {
   float: right;
   cursor: pointer;
 
+
+
 }
 
 /*meniu vertical*/
@@ -257,7 +261,8 @@ form input[type='radio'] {
   border: none;
   background-color: transparent;
   position: relative;
-  margin: 10px;
+  margin: 0 10px 10px 20px;
+
 }
 
 /*.my-navbar .nav-div ul li a {*/
@@ -269,7 +274,11 @@ form input[type='radio'] {
 
 .nav-header a {
   color: white;
+  padding: 5px;
+  text-align: center;
+
 }
+
 
 .nav-div ul li {
   height: 40px;
@@ -287,8 +296,9 @@ form input[type='radio'] {
 .my-navbar .nav-header .navbar-title {
   color: white;
   height: 30px;
-  text-align: center;
-  margin-left: 0px;
+  margin-left: 2px;
+  border-bottom: 1px solid gray;
+  width:220px;
 
 }
 
@@ -331,6 +341,7 @@ form input[type='radio'] {
 
 .btn-navbar {
   background-color: #ffffff;
+  margin-top: 26px;
 
 }
 
@@ -375,20 +386,28 @@ form input[type='radio'] {
 
 }
 
-.remove {
+.removeReminder {
   cursor: pointer;
   float:right;
 
 }
+.modifyReminder{
+  float: right;padding-right: 7px;
+  cursor: pointer;
+}
+
 #todo_list.newStyle{
   padding-top: 70px;
 }
 
-.btnCategory{
-  margin-left: 20px;
+.btnAddCategory{
+  /*margin-left: 20px;*/
+  float:right;
+  margin-right: 7px;
+  cursor: pointer;
 }
 .liStyle{
-  padding: 11px;
+  padding: 10px;
   cursor: pointer;
 
 }
@@ -400,9 +419,11 @@ form input[type='radio'] {
 
 .modifyCategory{
   float: right;
-  padding:10px 5px 10px 10px;
+  padding:10px 3px 10px 10px;
+  cursor:pointer;
 
 }
-.btnCategory{
-  cursor: pointer;
+
+.content{
+  padding-top: 10px;
 }
