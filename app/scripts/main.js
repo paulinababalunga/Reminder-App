@@ -132,16 +132,16 @@ var initEventHandlers = function () {
     location.reload();
   });
 
-  //$('#add').click(function(){
-  //  if (app.data.category == '') {
-  //    $('#add').prop('disabled', true);
-  //  } else {
-  //    $('#add').prop('disabled', false);
-  //  }
-  //});
 
-
-
+  //Disable add button when category is not selected
+  $('#add').click(function(){
+    if (app.config.selectedCategory == undefined) {
+      $('#add').prop('disabled', true);
+    } else {
+      $('#add').prop('disabled', false);
+    }
+  });
+  
 }
 
 //Init function
@@ -188,24 +188,23 @@ function addReminders(category) {
   });
 
 
-  //check a reminder and hide it
+  //check and uncheck a reminder and hide it
   $("#todo_list li input[type=checkbox]").click(function () {
-    //if ($(this).is(':checked')) {
     var reminderNo = $(this).parent().data('reminderId');
     var categoryNo = $(this).parent().data('categoryId');
+
+    if ($(this).is(':checked')) {
     //$(this).parent().css({opacity: 0.5});
     app.data[categoryNo].reminders[reminderNo].isDone = true;
-    // $(this).parent().addClass('setOpacity');
+      //$(this).parent().addClass('setOpacity');
     localStorage['app'] = JSON.stringify(app);
-    //
-    //} else {
-    //    var reminderNo = $(this).parent().data('reminderId');
-    //    var categoryNo = $(this).parent().data('categoryId');
-    //    app.data[categoryNo].reminders[reminderNo].isDone = false;
-    //    //  $(this).parent().css({opacity:1});
-    //    $(this).parent().addClass('notOpacity');
-    //    localStorage['app'] = JSON.stringify(app);
-    //}
+
+    } else {
+        app.data[categoryNo].reminders[reminderNo].isDone = false;
+        //  $(this).parent().css({opacity:1});
+        //$(this).parent().addClass('notOpacity');
+        localStorage['app'] = JSON.stringify(app);
+    }
   });
 }
 
@@ -238,6 +237,7 @@ function addCategories() {
     $(".span_title").text(categoryTitle);
     addReminders(categoryId);
     app.config.selectedCategory = categoryId;
+    //localStorage['app'] = JSON.stringify(app);
   });
 
 
@@ -254,7 +254,7 @@ function addCategories() {
   //Modify category
   $(".modifyCategory").click(function () {
     $(".modal-header h3").text("Edit Category");
-    $('.nav-tag').html();
+    //$('.nav-tag').html();
     app.config.editReminder = {
       //  //reminderId: $(this).parent().data('reminderId'),
       categoryId: $(this).parent().data('category')

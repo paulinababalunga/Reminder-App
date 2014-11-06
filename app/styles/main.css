@@ -279,6 +279,14 @@ form input[type='radio'] {
 
 }
 
+.my-navbar .nav-header .navbar-title {
+  color: white;
+  height: 30px;
+  margin-left: 2px;
+  border-bottom: 1px solid gray;
+  width:220px;
+
+}
 
 .nav-div ul li {
   height: 40px;
@@ -290,17 +298,12 @@ form input[type='radio'] {
   color: white;
   font: 16px Arial, serif;
   border-style: hidden;
+  cursor:pointer;
+  padding: 10px;
 
 }
 
-.my-navbar .nav-header .navbar-title {
-  color: white;
-  height: 30px;
-  margin-left: 2px;
-  border-bottom: 1px solid gray;
-  width:220px;
 
-}
 
 /*.my-navbar .nav-div ul li:nth-child(1) {*/
 /*border-radius: 10px;*/
@@ -315,7 +318,7 @@ form input[type='radio'] {
   margin-top: 20px;
   border-bottom: 0;
   /*padding: 10px;*/
-  cursor: pointer;
+  /*cursor: pointer;*/
 
 }
 
@@ -324,7 +327,7 @@ form input[type='radio'] {
   border-bottom-right-radius: 10px;
   margin-bottom: 10px;
   /*padding: 10px;*/
-  cursor: pointer;
+  /*cursor: pointer;*/
 
 }
 
@@ -407,20 +410,20 @@ form input[type='radio'] {
   cursor: pointer;
 }
 .liStyle{
-  padding: 10px;
-  cursor: pointer;
-
+  /*padding: 10px;*/
+  /*cursor: pointer;*/
 }
+
 .removeCategory{
-  cursor:pointer;
+  /*cursor:pointer;*/
   float:right;
-  padding: 10px;
+  padding: 2px;
 }
 
 .modifyCategory{
   float: right;
-  padding:10px 3px 10px 10px;
-  cursor:pointer;
+  padding-right: 5px;
+  /*cursor:pointer;*/
 
 }
 
