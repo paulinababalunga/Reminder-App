@@ -137,6 +137,8 @@ var initEventHandlers = function () {
     }
   });
 
+
+
 }
 
 //Init function
@@ -157,7 +159,7 @@ function addReminders() {
     $(".span_title").text(app.data[category].category);
     for (var reminder in app.data[category].reminders) {
       $("#todo_list").append(
-        '<li class="row li-row" id="reminder-' + reminder + '" data-reminder-id="' + reminder + '" data-category-id="' + category + '"' + + '" data-title="' + app.data[category].category +  /*(app.data[category].reminders[reminder].isDone ? 'style="display:none"' : '')*/ '' + '>' +
+        '<li class="row li-row"  id="reminder-' + reminder + '" data-reminder-id="' + reminder + '" data-category-id="' + category + '"' + + '" data-title="' + app.data[category].category +  /*(app.data[category].reminders[reminder].isDone ? 'style="display:none"' : '')*/ '' + '>' +
         '<input type="checkbox" class="checkboxInput" ' + (app.data[category].reminders[reminder].isDone ? 'checked' : '') + '>' +
         '<a href="#" class="listReminders"  >' + app.data[category].reminders[reminder].description + ' - ' + new Date(app.data[category].reminders[reminder].date).toLocaleString() + '</a>' +
           //'<a href="#"  class="remove">Remove</a>' +
@@ -168,11 +170,15 @@ function addReminders() {
     }
   }
 
-  $(".listReminders").click(function(){
-    var reminderId = $(this).parent().data('reminderId');
-
+  $("#todo_list li").click(function(){
+    app.config.editReminder = {
+      reminderId: $(this).data('reminderId'),
+      categoryId: $(this).data('categoryId')
+    };
+    $("h5").text(app.data[app.config.editReminder.categoryId].reminders[app.config.editReminder.reminderId].priorityLevel);
 
   });
+
 
 
   //Edit a reminder
@@ -245,18 +251,18 @@ function addCategories() {
   $('.removeCategory').click(function () {
     //var reminderNo = $(this).parent().data('reminderId');
     var categoryNo = $(this).parent().data('category');
-    console.log(categoryNo);
     delete app.data[categoryNo];
     $(this).parent().remove();
     //app.config.selectedCategory = categoryNo;
     app.config.selectedCategory = undefined;
     localStorage['app'] = JSON.stringify(app);
+    location.reload();
   });
 
   //Modify category
   $(".modifyCategory").click(function () {
     $(".modal-header h3").text("Edit Category");
-    //$('.nav-tag').html();
+    $('.nav-tag').html();
     app.config.editReminder = {
       //  //reminderId: $(this).parent().data('reminderId'),
       categoryId: $(this).parent().data('category')

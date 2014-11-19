@@ -1,4 +1,32 @@
 @media screen and (max-width: 480px) {
+
+  /*@media screen and (min-width: 320px) {*/
+  /*.header,*/
+  /*.marketing,*/
+  /*.footer {*/
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+  /*}*/
+
+  /*Remove the padding we set earlier*/
+  /*.header,*/
+  /*.marketing,*/
+  /*.footer {*/
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+  /*}*/
+
+  /*Space out the masthead*/
+  /*.header {*/
+    /*margin-bottom: 30px;*/
+  /*}*/
+
+  /*Remove the bottom border on the jumbotron for visual effect*/
+  /*.jumbotron {*/
+
+    /*border-bottom: 0;*/
+  /*}*/
+
   .my-navbar {
     position: absolute;
     width: 220px;
@@ -39,7 +67,8 @@
   }
   .my-container{
     margin-left: 0;
-    margin-right: 0
+    margin-right: 0;
+    width: 100%;
 
   }
 }

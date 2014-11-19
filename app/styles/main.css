@@ -10,7 +10,6 @@ body {
   /*padding-top: 10px;*/
   padding-bottom: 20px;
   /*background-color: #888D93 ;*/
-
   background-image: url("images/back.jpg");
 
 }
@@ -75,6 +74,10 @@ body {
   margin-top: 28px;
 }
 
+.content{
+  padding-top: 10px;
+}
+
 .my-container {
   background-color: white;
   border-radius: 5px;
@@ -89,67 +92,6 @@ body {
   margin-left: 30px;
   margin-top: 10px;
 }
-
-/*@media screen and (min-width: 320px) {*/
-/*.container {*/
-/*max-width: 300px;*/
-/*background-color: lightgray;*/
-/*border-radius: 3px;*/
-/*}*/
-
-/*.header,*/
-/*.marketing,*/
-/*.footer {*/
-/*padding-left: 0;*/
-/*padding-right: 0;*/
-/*}*/
-
-/* Remove the padding we set earlier */
-/*.header,*/
-/*.marketing,*/
-/*.footer {*/
-/*padding-left: 0;*/
-/*padding-right: 0;*/
-/*}*/
-
-/* Space out the masthead */
-/*.header {*/
-/*margin-bottom: 30px;*/
-/*}*/
-
-/* Remove the bottom border on the jumbotron for visual effect */
-/*.jumbotron {*/
-
-/*border-bottom: 0;*/
-/*}*/
-
-/*}*/
-
-/* Responsive: Portrait tablets and up */
-/*@media screen and (min-width: 768px) {*/
-/*.container {*/
-/*max-width: 730px;*/
-/*}*/
-
-/* Remove the padding we set earlier */
-/*.header,*/
-/*.marketing,*/
-/*.footer {*/
-/*padding-left: 0;*/
-/*padding-right: 0;*/
-/*}*/
-
-/* Space out the masthead */
-/*.header {*/
-/*margin-bottom: 30px;*/
-/*}*/
-
-/* Remove the bottom border on the jumbotron for visual effect */
-/*.jumbotron {*/
-/*border-bottom: 0;*/
-/*}*/
-
-/*}*/
 
 input[type=checkbox] {
   width: 30px height : 30 px;
@@ -176,9 +118,9 @@ input[type=checkbox]:checked:after {
 
 }
 
-ul {
-  list-style-type: none;
-}
+/*ul {*/
+  /*list-style-type: none;*/
+/*}*/
 
 .listBtn {
   cursor: pointer;
@@ -196,6 +138,7 @@ ul {
   padding: 7px;
   width: 100%;
   color: #000000;
+  list-style-type: none;
 }
 
 #todo_list a {
@@ -218,31 +161,11 @@ h4 {
 
 }
 
-#category option {
-  background-color: gray;
-}
-
-.modify {
-  float: right;
-  padding-right: 10px;
-  cursor: pointer;
-}
-
 form input[type='radio'] {
   width: 20px;
   height: 20px;
   margin: 5px;
-
 }
-
-/*#add {*/
-  /*border-radius: 7px;*/
-  /*color: white;*/
-  /*background-color: #404040;*/
-  /*margin: 5px;*/
-  /*float: right;*/
-
-/*}*/
 
 .addGlyphicon{
   color: white;
@@ -250,8 +173,6 @@ form input[type='radio'] {
   float: right;
   cursor: pointer;
   margin-right: 11px;
-
-
 }
 
 /*meniu vertical*/
@@ -262,6 +183,7 @@ form input[type='radio'] {
   background-color: transparent;
   position: relative;
   margin: 0 10px 10px 20px;
+
 
 }
 
@@ -300,41 +222,20 @@ form input[type='radio'] {
   border-style: hidden;
   cursor:pointer;
   padding: 10px;
-
 }
-
-
-
-/*.my-navbar .nav-div ul li:nth-child(1) {*/
-/*border-radius: 10px;*/
-/*margin-top: 15px;*/
-/*margin-bottom: 10px;*/
-
-/*}*/
 
 .my-navbar .nav-div ul li:first-child {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   margin-top: 20px;
   border-bottom: 0;
-  /*padding: 10px;*/
-  /*cursor: pointer;*/
-
 }
 
 .my-navbar .nav-div ul li:last-child {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-bottom: 10px;
-  /*padding: 10px;*/
-  /*cursor: pointer;*/
-
 }
-
-/*.my-navbar .nav-div ul li:nth-child(5) {*/
-  /*border-radius: 10px;*/
-  /*margin-bottom: 10px;*/
-/*}*/
 
 .my-navbar .nav-div ul li:active {
   /*background-color: rgba(0, 0, 0, 0.4);*/
@@ -423,10 +324,6 @@ form input[type='radio'] {
 .modifyCategory{
   float: right;
   padding-right: 5px;
-  /*cursor:pointer;*/
-
 }
 
-.content{
-  padding-top: 10px;
-}
+
